@@ -1,2 +1,2 @@
 # online-theft-clothing
-this my git repository my e-commerce project
+this my git repository of e-commerce project
