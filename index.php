@@ -24,49 +24,7 @@ $conn->close();
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">
-                    <a href="index.php">OTC<span class="logo-accent">THEFT</span></a>
-                </div>
-                <div class="nav-links">
-                    <a href="index.php" class="active">Home</a>
-                    <a href="category.php?cat=men">Men</a>
-                    <a href="category.php?cat=women">Women</a>
-                    <a href="category.php?cat=kids">Kids</a>
-                    <a href="about.php">About</a>
-                </div>
-                <div class="nav-icons">
-                    <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
-                    <a href="cart.php" class="cart-icon">
-                        <i class="fas fa-shopping-bag"></i>
-                        <span class="cart-count" id="cartCount">0</span>
-                    </a>
-                    <?php if (isLoggedIn()): ?>
-                        <div class="user-dropdown">
-                            <button class="user-btn"><i class="fas fa-user"></i> <?php echo htmlspecialchars($_SESSION['user_name']); ?> <i class="fas fa-chevron-down"></i></button>
-                            <div class="dropdown-menu">
-                                <?php if (isAdmin()): ?>
-                                    <a href="admin/dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-                                <?php endif; ?>
-                                <a href="orders.php"><i class="fas fa-box"></i> My Orders</a>
-                                <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
-                            </div>
-                        </div>
-                    <?php else: ?>
-                        <a href="login.php" class="login-link"><i class="fas fa-user"></i> Login</a>
-                    <?php endif; ?>
-                </div>
-                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
-            </div>
-            <div class="search-bar" id="searchBar">
-                <input type="text" id="searchInput" placeholder="Search for products...">
-                <button id="searchSubmit"><i class="fas fa-search"></i></button>
-            </div>
-        </nav>
-    </header>
-
+    <?php include 'header.php'; ?>
     <main>
         <!-- ==================== 5‑IMAGE CAROUSEL ==================== -->
         <div class="banner-carousel">
@@ -227,47 +185,9 @@ $conn->close();
         </div>
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Online Theft <span>Clothing</span></h3>
-                <p>Premium streetwear for the bold and fearless. Redefining urban fashion since 2024.</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h4>Shop</h4>
-                <a href="category.php?cat=men">Men</a>
-                <a href="category.php?cat=women">Women</a>
-                <a href="category.php?cat=kids">Kids</a>
-                <a href="#">New Arrivals</a>
-            </div>
-            <div class="footer-section">
-                <h4>Support</h4>
-                <a href="#">Contact Us</a>
-                <a href="#">Shipping Info</a>
-                <a href="#">Returns</a>
-                <a href="#">Size Guide</a>
-            </div>
-            <div class="footer-section">
-                <h4>Newsletter</h4>
-                <p>Get 10% off your first order</p>
-                <form class="newsletter-form" id="newsletterForm">
-                    <input type="email" placeholder="Your email">
-                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Online Theft Clothing. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <div id="toast" class="toast"></div>
+    <?php include 'footer.php'; ?>
+    
+      <div id="toast" class="toast"></div>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="script.js"></script>

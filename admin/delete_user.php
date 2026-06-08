@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
     $id = (int)$_POST['id'];
     
     if ($id == $_SESSION['user_id']) {
-        echo json_encode(['success' => false, 'message' => 'आफैलाई मेटाउन सकिँदैन']);
+        echo json_encode(['success' => false, 'message' => 'Cannot delete yourself']);
         exit();
     }
     

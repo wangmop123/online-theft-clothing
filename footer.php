@@ -6,7 +6,7 @@
     <div class="footer-content">
         <div class="footer-section">
             <h3>Online Theft <span>Clothing</span></h3>
-            <p>Premium streetwear for the bold and fearless. Redefining urban fashion since 2024.</p>
+            <p>Premium streetwear for the bold and fearless. Redefining urban fashion since 2026.</p>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -38,6 +38,6 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2024 Online Theft Clothing. All rights reserved.</p>
+        <p>&copy; 2026 Online Thrift Clothing. Developed by Pema Wangmo.</p>
     </div>
 </footer>

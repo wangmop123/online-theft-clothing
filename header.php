@@ -33,7 +33,6 @@
                         </div>
                     </div>
                 <?php else: ?>
-                    <!-- ✅ Direct link to login.php (no modal) -->
                     <a href="login.php" class="login-link"><i class="fas fa-user"></i> Login</a>
                 <?php endif; ?>
             </div>

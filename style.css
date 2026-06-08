@@ -273,9 +273,9 @@ h1, h2, h3, h4 {
 .banner-slides img {
     width: 100%;
     flex-shrink: 0;
-    object-fit: cover;       /* cover नै राख्नु छ भने तलको height auto गर्नुहोस् */
+    object-fit: cover;      
     height: auto;
-    aspect-ratio: 16 / 9;    /* तपाईंको तस्बिरको अनुपात अनुसार मिलाउनुहोस् (जस्तै 16:9, 4:3) */
+    aspect-ratio: 16 / 9;    
     display: block;
 }
 
@@ -369,7 +369,7 @@ h1, h2, h3, h4 {
     transform: translateY(-3px);
 }
 
-/* Hero Section (original – kept for compatibility) */
+/* Hero Section  */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -1134,7 +1134,7 @@ footer {
 @media (max-width: 600px) {
     .modal-product-details { flex-direction: column; }
 }
-/* Zoom on modal image only – no effect on product grid images */
+/* Zoom on modal image */
 #cartModal .modal-product-image {
     overflow: hidden;
     text-align: center;
@@ -1142,7 +1142,9 @@ footer {
 }
 #cartModal .modal-product-image img {
     transition: transform 0.2s ease;
-    width: 100%;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
     max-width: 200px;
 }
 #cartModal .modal-product-image img:hover {

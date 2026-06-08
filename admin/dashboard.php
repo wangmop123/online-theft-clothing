@@ -113,6 +113,7 @@ $users = $conn->query("SELECT id, full_name, email, role, status, created_at FRO
     </style>
 </head>
 <body>
+
 <div class="admin-container">
     <div class="admin-sidebar">
         <h2>OTC Admin</h2>
@@ -483,7 +484,7 @@ $(document).ready(function(){
                 success: function(res){
                     if(res.success){
                         btn.closest('tr').remove();
-                        showToast('प्रयोगकर्ता मेटियो', 'success');
+                        showToast('User deleted successfully', 'success');
                     } else {
                         showToast(res.message || 'Could not delete', 'error');
                     }

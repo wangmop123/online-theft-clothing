@@ -57,7 +57,7 @@ $conn->close();
                                 <div class="item-details">
                                     <h3><?php echo htmlspecialchars($item['name']); ?></h3>
                                     <p>Size: <?php echo $item['size']; ?></p>
-                                    <p class="price">$<?php echo number_format($item['price'], 2); ?></p>
+                                    <p class="price">रु <?php echo number_format($item['price'], 2); ?></p>
                                 </div>
                                 <div class="item-quantity">
                                     <button class="qty-minus">-</button>
@@ -65,7 +65,7 @@ $conn->close();
                                     <button class="qty-plus">+</button>
                                 </div>
                                 <div class="item-subtotal">
-                                    $<?php echo number_format($item['subtotal'], 2); ?>
+                                    रु<?php echo number_format($item['subtotal'], 2); ?>
                                 </div>
                                 <button class="remove-item" data-id="<?php echo $item['id']; ?>">
                                     <i class="fas fa-trash"></i>
@@ -78,7 +78,7 @@ $conn->close();
                         <h3>Order Summary</h3>
                         <div class="summary-row">
                             <span>Subtotal</span>
-                            <span>$<?php echo number_format($total, 2); ?></span>
+                            <span>रु <?php echo number_format($total, 2); ?></span>
                         </div>
                         <div class="summary-row">
                             <span>Shipping</span>
@@ -86,7 +86,7 @@ $conn->close();
                         </div>
                         <div class="summary-row total">
                             <span>Total</span>
-                            <span>$<?php echo number_format($total, 2); ?></span>
+                            <span>रु <?php echo number_format($total, 2); ?></span>
                         </div>
                         <div class="checkout-form">
                             <input type="text" id="shippingAddress" placeholder="Shipping Address" required>
